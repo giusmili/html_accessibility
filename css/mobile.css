@@ -1,0 +1,71 @@
+
+@media screen and (max-width: 100rem){
+    header h1{
+        line-height: 2.6rem;
+        font-size: 2.5rem;
+        padding-top: 1rem;
+    }
+    header h1 .material-icons{
+        vertical-align: -0.2rem;
+        margin-right: .5rem;
+    }
+    header img{
+        position: static;
+        margin: 0 auto;
+        display: block;
+    }
+    nav .accessibility-page{
+        padding: .8rem;
+        position: static;
+        top: 0;
+        right:0;
+        height: auto;
+        width: auto;
+        text-align: left;
+        z-index: 1;
+        cursor: pointer;
+    }
+    nav .accessibility-page img{
+        display: inline-block;
+    }
+    aside{
+        margin: 0;
+        box-shadow: none;
+    }
+    aside ul{
+        display: none;
+    }
+    main{
+        margin-top:0.1rem;
+        margin-bottom: 0.4rem;
+        box-shadow: none;
+    }
+    section h2{
+        font-size: 2rem;
+    }
+    section p, section ul li{
+        text-align: justify;
+    }
+    section .grid-image{
+       grid-template-columns: repeat(2, 1fr);
+    }
+    section .grid-image img{
+        transform: scale(.8);
+    }
+    footer{
+        margin: 0;
+        padding:0;
+    }
+    footer p{
+       background-color: var(--color-header); 
+       color: #fff;
+       line-height: 3.5rem;
+    }
+
+}
+@media screen and (orientation: landscape){
+    section .grid-image{
+        grid-template-columns: repeat(4, 1fr);
+     }
+
+}

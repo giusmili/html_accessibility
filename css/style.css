@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400&display=swap');
 html{
     font-size: 62.5%;
 }
@@ -20,7 +21,7 @@ h1,h2,h3,h4,p,ul,figure{
     --color-default:#fff;
     --color-header: #091536;
     --color-main: #EAEFFF;
-    --color-subtitle: #094AFE;
+    --color-subtitle: #2980b9;
 }
 header{
     position: relative;
@@ -33,6 +34,63 @@ header img{
     z-index: 2;
     width: 5.5rem;
     height: 5.5rem;
+}
+aside{
+position: relative;
+  font-family: 'Source Code Pro', serif;
+  max-width: 100rem;
+  margin: 5rem auto;
+  background-color: #b2bec3;
+  padding: 1rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+  border: solid .1rem transparent;
+}
+aside h2{
+    line-height: 3.5rem;
+    font-weight: 400;
+}
+aside ul{
+    
+    position: absolute;
+  
+    top:1.4rem;
+    right: 0;
+    z-index: 2;
+    width: 10rem;
+}
+aside ul li{
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% / 3);
+}
+aside p{
+    background-color: #222;
+    color: #00b894;
+    padding: 1rem;
+    line-height: 3rem;
+   
+}
+aside p .cursor::before{
+    content: '_';
+    color: #fff;
+    animation: cursor linear .4s infinite alternate;
+    font-weight: 400;
+}
+@keyframes cursor {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+    
+}
+aside strong{
+    font-size: 2rem;
+}
+aside strong::before{
+    content: url("../asset/navigate_next_black_24dp.svg");
+    vertical-align: -.7rem;
+    filter: invert(100%);
 }
 nav{
     position: relative;
@@ -63,7 +121,7 @@ header h1{
 section ul li img{
     display: block;
     max-width: 100%;
-    clip-path: polygon(102.75% -2px, 102.52% 87.55%, -2.32% 99.57%, -8px -1.48%);
+    /*clip-path: polygon(102.75% -2px, 102.52% 87.55%, -2.32% 99.57%, -8px -1.48%);*/
 }
 section .grid-image{
     display: grid;
@@ -148,64 +206,3 @@ iframe{
     margin:0 auto;
 }
 
-/* version mobile */
-
-@media screen and (max-width: 100rem){
-    header h1{
-        line-height: 2.6rem;
-        font-size: 2.5rem;
-        padding-top: 1rem;
-    }
-    header h1 .material-icons{
-        vertical-align: -0.2rem;
-        margin-right: .5rem;
-    }
-    header img{
-        position: static;
-        margin: 0 auto;
-        display: block;
-    }
-    nav .accessibility-page{
-        padding: .8rem;
-        position: static;
-        top: 0;
-        right:0;
-        height: auto;
-        width: auto;
-        text-align: left;
-        z-index: 1;
-        cursor: pointer;
-    }
-    nav .accessibility-page img{
-        display: inline-block;
-    }
-    main{
-        margin-top:0.1rem;
-        margin-bottom: 0.4rem;
-    }
-    section h2{
-        font-size: 2rem;
-    }
-    section p, section ul li{
-        text-align: justify;
-    }
-    section .grid-image{
-       grid-template-columns: repeat(2, 1fr);
-    }
-    footer{
-        margin: 0;
-        padding:0;
-    }
-    footer p{
-       background-color: var(--color-header); 
-       color: #fff;
-       line-height: 3.5rem;
-    }
-
-}
-@media screen and (orientation: landscape){
-    section .grid-image{
-        grid-template-columns: repeat(4, 1fr);
-     }
-
-}
